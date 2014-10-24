@@ -18,18 +18,19 @@ import javax.ws.rs.Produces;
  *
  * @author admin
  */
+
 @Path("/emp")
 public class TestDao {
+    private final static  String path_He="/he";
     @GET
-	@Path("/he")
+	@Path(path_He)
     @Produces("application/json")
 	public String getMsg() {
- 
+
             List<TestData> resultlist= DAOHelper.getDAO().getTestDataList();
-		String output = "Jersey say : " ;
- 
+
 		Gson g = new Gson();
         return g.toJson(resultlist);
- 
+
 	}
 }
