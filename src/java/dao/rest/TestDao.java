@@ -21,10 +21,15 @@ import javax.ws.rs.Produces;
 
 @Path("/emp")
 public class TestDao {
+    
+    private final static  String produces_type="application/json";
     private final static  String path_He="/he";
+    
+    
+    
     @GET
 	@Path(path_He)
-    @Produces("application/json")
+    @Produces(produces_type)
 	public String getMsg() {
 
             List<TestData> resultlist= DAOHelper.getDAO().getTestDataList();
