@@ -28,7 +28,7 @@ public class TestDao {
     
     
     @GET
-	@Path(path_He)
+    @Path(path_He)
     @Produces(produces_type)
 	public String getMsg() {
 
